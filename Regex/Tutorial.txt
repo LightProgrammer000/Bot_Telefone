@@ -1,0 +1,54 @@
+=============
+    REGEX
+=============
+Site: https://regex101.com/
+
+
+# Capturar qualquer caractere
+# Regex: "."
+# Explicação: O ponto (.) captura qualquer caractere, exceto quebras de linha. Serve para corresponder a qualquer coisa.
+
+# Capturar uma palavra específica
+# Regex: \bpalavra\b
+# Regex: \bSolyd\b
+# Explicação**: A expressão `\b` é uma âncora de palavra.
+Essa regex procura a palavra "palavra" isolada, sem estar embutida em outra palavra (ex: "exemplo_palavra").
+
+# Capturar números
+# Regex: \d+
+* Explicação**: O `\d` representa qualquer dígito de 0 a 9, e o `+` significa que deve ter pelo menos um dígito.
+Captura números inteiros de qualquer tamanho.
+
+# Capturar letras
+# Regex: [a-zA-Z]+
+# Explicação: O `[a-zA-Z]` captura qualquer letra minúscula ou maiúscula.
+O `+` significa que deve ter pelo menos uma letra.
+
+# Capturar uma sequência de números com 3 dígitos
+# Regex: \d{3}
+# Explicação**: O `{3}` especifica que deve haver exatamente três dígitos.
+
+# Capturar uma data no formato dd/mm/aaaa
+# Regex: \d{2}/\d{2}/\d{4}
+# Explicação: Captura uma data no formato dia/mês/ano.
+O `\d{2}` captura dois dígitos (para o dia e o mês) e `\d{4}` captura quatro dígitos (para o ano).
+
+# Capturar uma string que começa com um número e tem 4 ou mais caracteres
+# Regex: \d.{3,}
+# Explicação: O `\d` captura um número e o `.{3,}` captura pelo menos três caracteres quaisquer após o número
+(ou seja, a string deve começar com um número e ter no mínimo 4 caracteres).
+
+# Capturar um e-mail
+# Regex: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+# Explicação: Esta regex captura e-mails. Ela verifica se há uma sequência de caracteres
+(letras, números e símbolos permitidos), seguida de "@" e de um domínio válido com a extensão.
+
+# Capturar um número de telefone brasileiro
+# Regex: \(?\d{2}\)?[\s\-]?\d{4,5}[\s\-]?\d{4}
+# Explicação: Captura números de telefone brasileiros com ou sem parênteses no DDD,
+ e com ou sem espaço ou hífen separando os números.
+
+# Capturar uma URL
+# Regex: https?://[a-zA-Z0-9.-]+(?:/[a-zA-Z0-9/-]*)?
+# Explicação: Essa regex captura URLs que começam com "http://" ou "https://",
+seguidas de um domínio e, opcionalmente, um caminho adicional.
